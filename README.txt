@@ -1,98 +1,245 @@
-This zip archive contains data files from Cricsheet in JSON format. This
-archive contains 74 Gujarat Titans matches.
+Gujarat Titans Batting Analysis (IPL 2025–2026)
+Overview
 
+This project is a data-driven batting analysis of Gujarat Titans across the IPL 2025 and IPL 2026 league stages, with special focus on the team’s dependence on its top-order batting trio:
 
-The JSON data files contained in this zip file are version 1.0.0, and 1.1.0
-files. You can learn about the structure of these files at
-https://cricsheet.org/format/json/
+Shubman Gill
+B Sai Sudharsan
+Jos Buttler
 
+Using ball-by-ball match JSON data from Cricsheet, this project investigates:
 
-You can find the available downloads at https://cricsheet.org/downloads/, and
-you can find the most up-to-date version of this zip file at
-https://cricsheet.org/downloads/gujarat_titans_json.zip
+How much of Gujarat Titans’ batting output comes from the top 3
+Whether GT is overly top-order dependent
+How this changes by venue, innings situation, and result
+Individual scoring profiles of Gill / Sai / Buttler by batting phase
+GT’s win/loss patterns in relation to top-order contribution
+Dataset
 
+Source:
 
-The matches contained in this zip archive are listed below. The first field is
-the start date of the match (for test matches or other multi-day matches), or
-the actual date (for all other types of match). The second is the type of
-teams involved, whether 'club', or 'international'. The third is the type of
-match, either Test, ODI, ODM, T20, IT20, MDM, or a club competition code (such
-as IPL). The 4th field is the gender of the players involved in the match. The
-5th field is the id of the match, and the remainder of the line shows the
-teams involved in the match.
+Cricsheet JSON data
 
+Dataset used:
 
-2026-05-21 - club - IPL - male - 1529309 - Gujarat Titans vs Chennai Super Kings
-2026-05-16 - club - IPL - male - 1529303 - Kolkata Knight Riders vs Gujarat Titans
-2026-05-12 - club - IPL - male - 1529299 - Gujarat Titans vs Sunrisers Hyderabad
-2026-05-09 - club - IPL - male - 1529295 - Gujarat Titans vs Rajasthan Royals
-2026-05-03 - club - IPL - male - 1529289 - Punjab Kings vs Gujarat Titans
-2026-04-30 - club - IPL - male - 1529285 - Royal Challengers Bengaluru vs Gujarat Titans
-2026-04-26 - club - IPL - male - 1529280 - Chennai Super Kings vs Gujarat Titans
-2026-04-24 - club - IPL - male - 1529277 - Gujarat Titans vs Royal Challengers Bengaluru
-2026-04-20 - club - IPL - male - 1529273 - Mumbai Indians vs Gujarat Titans
-2026-04-17 - club - IPL - male - 1529268 - Kolkata Knight Riders vs Gujarat Titans
-2026-04-12 - club - IPL - male - 1527692 - Lucknow Super Giants vs Gujarat Titans
-2026-04-08 - club - IPL - male - 1527687 - Gujarat Titans vs Delhi Capitals
-2026-04-04 - club - IPL - male - 1527682 - Rajasthan Royals vs Gujarat Titans
-2026-03-31 - club - IPL - male - 1527677 - Gujarat Titans vs Punjab Kings
-2025-05-30 - club - IPL - male - 1473509 - Mumbai Indians vs Gujarat Titans
-2025-05-25 - club - IPL - male - 1473504 - Chennai Super Kings vs Gujarat Titans
-2025-05-22 - club - IPL - male - 1473502 - Lucknow Super Giants vs Gujarat Titans
-2025-05-18 - club - IPL - male - 1473498 - Delhi Capitals vs Gujarat Titans
-2025-05-06 - club - IPL - male - 1473493 - Mumbai Indians vs Gujarat Titans
-2025-05-02 - club - IPL - male - 1473488 - Gujarat Titans vs Sunrisers Hyderabad
-2025-04-28 - club - IPL - male - 1473484 - Gujarat Titans vs Rajasthan Royals
-2025-04-21 - club - IPL - male - 1473476 - Gujarat Titans vs Kolkata Knight Riders
-2025-04-19 - club - IPL - male - 1473472 - Delhi Capitals vs Gujarat Titans
-2025-04-12 - club - IPL - male - 1473463 - Gujarat Titans vs Lucknow Super Giants
-2025-04-09 - club - IPL - male - 1473460 - Gujarat Titans vs Rajasthan Royals
-2025-04-06 - club - IPL - male - 1473457 - Sunrisers Hyderabad vs Gujarat Titans
-2025-04-02 - club - IPL - male - 1473451 - Royal Challengers Bengaluru vs Gujarat Titans
-2025-03-29 - club - IPL - male - 1473446 - Gujarat Titans vs Mumbai Indians
-2025-03-25 - club - IPL - male - 1473442 - Punjab Kings vs Gujarat Titans
-2024-05-10 - club - IPL - male - 1426297 - Gujarat Titans vs Chennai Super Kings
-2024-05-04 - club - IPL - male - 1426290 - Gujarat Titans vs Royal Challengers Bengaluru
-2024-04-28 - club - IPL - male - 1426283 - Gujarat Titans vs Royal Challengers Bengaluru
-2024-04-24 - club - IPL - male - 1426278 - Delhi Capitals vs Gujarat Titans
-2024-04-21 - club - IPL - male - 1426275 - Punjab Kings vs Gujarat Titans
-2024-04-17 - club - IPL - male - 1426270 - Gujarat Titans vs Delhi Capitals
-2024-04-10 - club - IPL - male - 1426262 - Rajasthan Royals vs Gujarat Titans
-2024-04-07 - club - IPL - male - 1422139 - Lucknow Super Giants vs Gujarat Titans
-2024-04-04 - club - IPL - male - 1422135 - Gujarat Titans vs Punjab Kings
-2024-03-31 - club - IPL - male - 1422130 - Sunrisers Hyderabad vs Gujarat Titans
-2024-03-26 - club - IPL - male - 1422125 - Chennai Super Kings vs Gujarat Titans
-2024-03-24 - club - IPL - male - 1422123 - Gujarat Titans vs Mumbai Indians
-2023-05-29 - club - IPL - male - 1370353 - Gujarat Titans vs Chennai Super Kings
-2023-05-26 - club - IPL - male - 1370352 - Gujarat Titans vs Mumbai Indians
-2023-05-23 - club - IPL - male - 1370350 - Chennai Super Kings vs Gujarat Titans
-2023-05-21 - club - IPL - male - 1359544 - Royal Challengers Bangalore vs Gujarat Titans
-2023-05-15 - club - IPL - male - 1359536 - Gujarat Titans vs Sunrisers Hyderabad
-2023-05-12 - club - IPL - male - 1359531 - Mumbai Indians vs Gujarat Titans
-2023-05-07 - club - IPL - male - 1359525 - Gujarat Titans vs Lucknow Super Giants
-2023-05-05 - club - IPL - male - 1359522 - Rajasthan Royals vs Gujarat Titans
-2023-05-02 - club - IPL - male - 1359518 - Delhi Capitals vs Gujarat Titans
-2023-04-29 - club - IPL - male - 1359513 - Kolkata Knight Riders vs Gujarat Titans
-2023-04-25 - club - IPL - male - 1359509 - Gujarat Titans vs Mumbai Indians
-2023-04-22 - club - IPL - male - 1359504 - Gujarat Titans vs Lucknow Super Giants
-2023-04-16 - club - IPL - male - 1359497 - Gujarat Titans vs Rajasthan Royals
-2023-04-13 - club - IPL - male - 1359492 - Punjab Kings vs Gujarat Titans
-2023-04-09 - club - IPL - male - 1359487 - Gujarat Titans vs Kolkata Knight Riders
-2023-04-04 - club - IPL - male - 1359481 - Delhi Capitals vs Gujarat Titans
-2023-03-31 - club - IPL - male - 1359475 - Chennai Super Kings vs Gujarat Titans
-2022-05-29 - club - IPL - male - 1312200 - Rajasthan Royals vs Gujarat Titans
-2022-05-24 - club - IPL - male - 1312197 - Rajasthan Royals vs Gujarat Titans
-2022-05-19 - club - IPL - male - 1304113 - Gujarat Titans vs Royal Challengers Bangalore
-2022-05-15 - club - IPL - male - 1304108 - Chennai Super Kings vs Gujarat Titans
-2022-05-10 - club - IPL - male - 1304103 - Gujarat Titans vs Lucknow Super Giants
-2022-05-06 - club - IPL - male - 1304097 - Mumbai Indians vs Gujarat Titans
-2022-05-03 - club - IPL - male - 1304094 - Gujarat Titans vs Punjab Kings
-2022-04-30 - club - IPL - male - 1304089 - Royal Challengers Bangalore vs Gujarat Titans
-2022-04-27 - club - IPL - male - 1304086 - Sunrisers Hyderabad vs Gujarat Titans
-2022-04-23 - club - IPL - male - 1304081 - Gujarat Titans vs Kolkata Knight Riders
-2022-04-17 - club - IPL - male - 1304075 - Chennai Super Kings vs Gujarat Titans
-2022-04-14 - club - IPL - male - 1304070 - Gujarat Titans vs Rajasthan Royals
-2022-04-11 - club - IPL - male - 1304067 - Gujarat Titans vs Sunrisers Hyderabad
-2022-04-08 - club - IPL - male - 1304062 - Punjab Kings vs Gujarat Titans
-2022-04-02 - club - IPL - male - 1304056 - Gujarat Titans vs Delhi Capitals
-2022-03-28 - club - IPL - male - 1304050 - Lucknow Super Giants vs Gujarat Titans
+Gujarat Titans match JSON archive
+Ball-by-ball IPL match data in JSON format
+
+Total matches available in archive: 74
+
+For this analysis:
+
+IPL 2025 → 14 league-stage matches used
+IPL 2026 → 14 league-stage matches used
+
+Total analysed:
+
+28 league-stage matches
+
+Playoff matches were excluded from season-comparison analysis where required.
+
+Project Objectives
+
+This project attempts to answer:
+
+Team-Level Questions
+How top-heavy is Gujarat Titans’ batting?
+What % of total runs are scored by the top 3?
+How much do the remaining batters contribute?
+Venue-Based Questions
+Does GT depend more on the top 3 at home or away?
+Does Ahmedabad batting differ from away batting?
+Match Context Questions
+How does top-3 contribution change:
+in wins?
+in losses?
+batting first?
+chasing?
+Player-Level Questions
+
+For Gill, Sai and Buttler:
+
+Runs scored in Powerplay (0–6)
+Runs scored in Middle Overs (7–15)
+Runs scored in Death Overs (16–20)
+Balls faced in each phase
+Strike Rate by phase
+Batting Average by phase
+Tech Stack
+Language
+Python
+Development Environment
+Visual Studio Code
+Jupyter Notebook (.ipynb)
+Libraries Used
+Data Processing
+pandas
+Used for:
+DataFrames
+grouping
+aggregations
+filtering
+match-by-match analysis
+Visualisation
+Matplotlib
+
+Used for:
+
+Pie charts
+Bar graphs
+Horizontal stacked charts
+Percentage contribution visualisations
+Methodology
+1. JSON Parsing
+
+Each Gujarat Titans JSON file was parsed manually.
+
+Important fields extracted:
+
+season
+match_id
+batting_team
+batter
+runs
+over
+player_dismissed
+
+This enabled ball-by-ball structured analysis.
+
+2. DataFrame Construction
+
+A consolidated ball-by-ball DataFrame was created from all GT matches.
+
+Each row represents a single delivery.
+
+3. Match Segmentation
+
+Matches were segmented into:
+
+Home vs Away
+Won vs Lost
+Batting First vs Batting Second
+4. Phase Segmentation
+
+Overs were split into standard T20 phases:
+
+Phase	Overs
+Powerplay	0–6
+Middle Overs	7–15
+Death Overs	16–20
+5. Trio Contribution Analysis
+
+Top-order trio defined as:
+
+Gill
+Sai Sudharsan
+Buttler
+
+Measured against:
+
+Trio Runs vs Rest of Team Runs
+
+across all contexts.
+
+Visualisations Used
+1. Pie Charts
+
+Used to compare:
+
+Top 3 Runs vs Rest of Team Runs
+
+Across:
+
+Home matches
+Away matches
+Wins
+Losses
+Full seasons
+Combined 2025–26
+2. Stacked Bar Charts
+
+Used to compare:
+
+Top 3 % contribution vs Rest % contribution
+
+Across match situations.
+
+3. Player Comparison Bar Graphs
+
+Used for:
+
+Batting Average by phase
+Strike Rate by phase
+Runs scored by player in wins vs losses
+4. Phase Distribution Horizontal Bars
+
+Used to visualize:
+
+What % of each batter’s runs come in:
+- Powerplay
+- Middle Overs
+- Death Overs
+
+for:
+
+Gill
+Sai Sudharsan
+Buttler
+Key Findings
+1. Gujarat Titans are heavily top-order dependent
+
+Across IPL 2025–26:
+
+Gill + Sai + Buttler contribute a dominant share of total GT runs.
+
+This confirms GT as one of the most top-3 dependent batting units.
+
+2. Away dependency is stronger than home dependency
+
+The top 3 contribute an even larger percentage of runs in away fixtures compared to Ahmedabad.
+
+3. GT’s chases are heavily driven by the top 3
+
+In successful run-chases, the trio contributes a very high share of the total.
+
+4. Distinct player roles emerge
+B Sai Sudharsan
+
+Strongest powerplay contributor.
+
+Shubman Gill
+
+Anchor through powerplay + middle overs.
+
+Jos Buttler
+
+Middle-over accelerator and death-over finisher.
+
+These complementary roles explain why the trio functions so effectively together.
+
+How to Run
+Clone repo
+git clone <repo-url>
+Install dependencies
+pip install pandas matplotlib
+Open notebook
+analysis.ipynb
+
+Run all cells.
+
+Future Scope
+
+Possible extensions:
+
+Compare GT top-3 dependency with other IPL teams
+Compare GT 2022–2026 evolution
+Opposition-wise analysis
+Batter partnerships network analysis
+Boundary % analysis
+Dot-ball pressure analysis
+Win probability modelling
+Author
+
+Created by Shivansh Tiwari
+
+Independent cricket analytics project exploring Gujarat Titans batting trends through ball-by-ball IPL data.
