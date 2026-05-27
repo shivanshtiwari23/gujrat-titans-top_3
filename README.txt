@@ -1,141 +1,129 @@
-Gujarat Titans Top-Order Batting Analysis (IPL 2025–26)
+# Gujarat Titans Top-Order Batting Analysis (IPL 2025–26)
 
-A ball-by-ball batting analysis of Gujarat Titans across IPL 2025–26, focused on how much the team relies on its top-order trio:
+<p align="center">
+  Ball-by-ball cricket analytics project exploring how heavily Gujarat Titans rely on their top-order batting trio.
+</p>
 
-Shubman Gill
-Sai Sudharsan
-Jos Buttler
-View the Analysis
-Live Interactive Notebook
+<p align="center">
+  <a href="https://shivanshtiwari23.github.io/gujrat-titans-top_3/"><img src="https://img.shields.io/badge/View-Live%20Analysis-blue?style=for-the-badge"></a>
+  <a href="https://cricsheet.org/"><img src="https://img.shields.io/badge/Data-Cricsheet-orange?style=for-the-badge"></a>
+  <img src="https://img.shields.io/badge/Python-pandas%20%7C%20matplotlib-green?style=for-the-badge">
+</p>
 
-🌐 Open here:
-Live Project Website
+---
 
-Source Notebook
+## Live Project Website
 
-analysis.ipynb
+### 🔗 Explore the full interactive notebook here:
 
-Project Goal
+https://shivanshtiwari23.github.io/gujrat-titans-top_3/
 
-This project explores one core question:
+---
 
-How dependent are Gujarat Titans on their top 3 batters?
+## Players Studied
 
-Using ball-by-ball IPL data, the analysis breaks this down across:
+- Shubman Gill  
+- B Sai Sudharsan  
+- Jos Buttler  
 
-overall team batting contribution
-home vs away matches
-wins vs losses
-batting first vs chasing
-individual player scoring by phase
-Dataset
+---
 
-Source: Cricsheet
+## Main Research Question
 
-Matches Analysed
-IPL 2025 → 14 league matches
-IPL 2026 → 14 league matches
+# How dependent are Gujarat Titans on their top 3 batters?
 
-Total: 28 Gujarat Titans matches
+This project analyses:
 
-Tools Used
-Language
-Python
-Libraries
-pandas
-matplotlib
-Environment
-Jupyter Notebook
-Visual Studio Code
-Research Workflow
-1. JSON Parsing
+- Top 3 vs rest-of-team run contribution
+- Home vs Away performance
+- Wins vs Losses
+- Batting first vs Chasing
+- Powerplay / Middle overs / Death overs scoring
+- Individual player scoring profiles
 
-Parsed Gujarat Titans match JSON files from Cricsheet.
+---
 
-Extracted:
+## Dataset
 
-batter
-runs
-over
-dismissal
-innings
-season
-2. Ball-by-Ball DataFrame
+**Source:** Cricsheet ball-by-ball IPL JSON data
 
-Converted all deliveries into a single structured dataset for analysis.
+### Matches analysed:
+- IPL 2025 → 14 matches
+- IPL 2026 → 14 matches
 
-3. Match Segmentation
+### Total:
+# 28 Gujarat Titans matches
 
-Split matches into:
+---
 
-Home vs Away
-Wins vs Losses
-Batting First vs Chasing
-4. Phase Analysis
+## Tech Stack
 
-Overs divided into T20 phases:
+| Area | Tools |
+|---|---:|
+| Language | Python |
+| Analysis | pandas |
+| Visualisation | matplotlib |
+| Notebook | Jupyter |
+| IDE | VS Code |
 
-Phase	Overs
-Powerplay	0–6
-Middle Overs	7–15
-Death Overs	16–20
-Visualisations Included
-Pie charts → Top 3 vs rest of batting unit
-Stacked bar charts → contribution % by context
-Player comparison charts → strike rate / averages
-Phase-wise scoring distributions
-Key Findings
-Gujarat Titans are strongly top-order driven
+---
 
-The majority of team runs come from Gill, Sai Sudharsan and Buttler.
+## Research Workflow
 
-Away matches show higher top-order dependence
+- JSON parsing from Cricsheet
+- Ball-by-ball dataframe construction
+- Match segmentation
+- Phase segmentation
+- Contribution analysis
+- Data visualisation
+- Interpretation & findings
 
-The trio contributes an even bigger share outside Ahmedabad.
+---
 
-Chases are powered by the top 3
+## Key Findings
 
-GT’s successful run chases rely heavily on early top-order scoring.
+### Gujarat Titans are highly top-order dependent
+Gill + Sai + Buttler contribute the majority of GT’s batting output.
 
-Clear batting roles emerge
-Sai Sudharsan
+### Away matches show even stronger dependency
+Top-order contribution rises further outside Ahmedabad.
 
-Powerplay scorer
+### GT chases are driven by the trio
+Successful run-chases rely heavily on top-order scoring.
 
-Shubman Gill
+### Clear role separation exists
+- **Sai Sudharsan** → powerplay scorer  
+- **Shubman Gill** → anchor  
+- **Jos Buttler** → accelerator + finisher  
 
-Anchor through powerplay + middle overs
+---
 
-Jos Buttler
+## How to Read This Project
 
-Middle-over aggressor + finisher
+Recommended order:
 
-How to Navigate This Research
+### 1. Open Live Analysis Website  
+### 2. View Team Contribution Charts  
+### 3. Compare Home vs Away  
+### 4. Review Win/Loss breakdown  
+### 5. Explore player phase-wise analysis  
+### 6. Read conclusions  
 
-If you’re visiting the project:
+---
 
-Start here:
+## Future Scope
 
-→ Open the Live Project Website
+- GT vs other IPL teams comparison
+- Boundary %
+- Dot-ball pressure analysis
+- Partnership network analysis
+- Opposition-wise trends
+- Win probability modelling
 
-Then browse in this order:
+---
 
-Team-level contribution charts
-Home vs Away comparison
-Win vs Loss analysis
-Player phase-wise scoring breakdown
-Final insights & conclusions
-Future Scope
+## Author
 
-Possible extensions:
+**Shivansh Tiwari**
 
-compare GT with other IPL teams
-partnership network analysis
-boundary %
-dot-ball pressure
-opposition-wise trends
-win probability modelling
-Author
-
-Shivansh Tiwari
-Independent cricket analytics project using ball-by-ball IPL data.
+Independent cricket analytics project built using ball-by-ball IPL data.
